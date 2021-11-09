@@ -64,6 +64,51 @@ class _PreferencePageState extends State<PreferencePage> {
                     runSpacing: 24,
                     children: generateGenreWidgets(context),
                   ),
+                  SizedBox(
+                    height: 24,
+                  ),
+                  Text(
+                    "Movie Languange\nYou Prefer?",
+                    style: blackTextFont.copyWith(fontSize: 20),
+                  ),
+                  SizedBox(
+                    height: 16,
+                  ),
+                  Wrap(
+                    spacing: 24,
+                    runSpacing: 24,
+                    children: generateLangWidgets(context),
+                  ),
+                  SizedBox(
+                    height: 30,
+                  ),
+                  Center(
+                    child: FloatingActionButton(
+                      elevation: 0,
+                      backgroundColor: mainColor,
+                      child: Icon(
+                        Icons.arrow_forward,
+                      ),
+                      onPressed: () {
+                        if (selectedGenres.length != 4) {
+                          Flushbar(
+                            duration: Duration(milliseconds: 1500),
+                            flushbarPosition: FlushbarPosition.TOP,
+                            backgroundColor: Color(0xFFFF5C83),
+                            message: "Please Select 4 Genres",
+                          )..show(context);
+                        } else {
+                          widget.registrationData.selectedGenres =
+                              selectedGenres;
+                          widget.registrationData.selectedLang =
+                              selectedLanguange;
+                          context.read<PageBloc>().add(
+                              GoToAccountConfirmationPage(
+                                  widget.registrationData));
+                        }
+                      },
+                    ),
+                  ),
                 ],
               )
             ],
@@ -84,6 +129,24 @@ class _PreferencePageState extends State<PreferencePage> {
               isSelected: selectedGenres.contains(e),
               onTap: () {
                 onSelectGenre(e);
+              },
+            ))
+        .toList();
+  }
+
+  List<Widget> generateLangWidgets(BuildContext context) {
+    double width =
+        (MediaQuery.of(context).size.width - 2 * defaultMargin - 24) / 2;
+
+    return widget.languanges
+        .map((e) => SelectableBox(
+              e,
+              width: width,
+              isSelected: selectedLanguange == e,
+              onTap: () {
+                setState(() {
+                  selectedLanguange = e;
+                });
               },
             ))
         .toList();
