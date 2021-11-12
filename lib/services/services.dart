@@ -5,3 +5,4 @@ import 'package:bwa_flutix/extensions/extensions.dart';
 
 part 'auth_services.dart';
 part 'user_services.dart';
+part 'movie_services.dart';

@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "382624897304",
-    "project_id": "bwaf-68610",
-    "storage_bucket": "bwaf-68610.appspot.com"
+    "project_number": "372372620838",
+    "project_id": "bwaflutix-36f2b",
+    "storage_bucket": "bwaflutix-36f2b.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:382624897304:android:0f3521fe0900d9131a266d",
+        "mobilesdk_app_id": "1:372372620838:android:b74dc4a51048d68dc688e7",
         "android_client_info": {
           "package_name": "com.example.bwa_flutix"
         }
       },
       "oauth_client": [
         {
-          "client_id": "382624897304-7bls6chpfopa5u4cgioot74ojqtn34hb.apps.googleusercontent.com",
+          "client_id": "372372620838-91rcr8i7patr4tjsuvbq47qvo0n9uiku.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDwqB_kuqMYfj1ZTXS_eW2IXI-CPZWhyyk"
+          "current_key": "AIzaSyCu72R0Ab5Ba7bbAL3XSrwETOuDYSKHV4w"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "382624897304-7bls6chpfopa5u4cgioot74ojqtn34hb.apps.googleusercontent.com",
+              "client_id": "372372620838-91rcr8i7patr4tjsuvbq47qvo0n9uiku.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

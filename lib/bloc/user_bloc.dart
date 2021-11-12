@@ -21,6 +21,12 @@ class UserBloc extends Bloc<UserEvent, UserState> {
       yield UserLoaded(userReal);
     } else if (event is SignOut) {
       yield UserInitial();
+    } else if (event is UpdateData) {
+      UserReal updateUser = (state as UserLoaded)
+          .userReal
+          .copyWith(name: event.name, profilePicture: event.profileImage);
+      await UserServices.updateUser(updateUser);
+      yield UserLoaded(updateUser);
     }
   }
 }

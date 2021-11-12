@@ -16,6 +16,14 @@ class UserReal extends Equatable {
       this.selectedLanguange,
       this.balance});
 
+  UserReal copyWith({String name, String profilePicture, int balance}) =>
+      UserReal(this.id, this.email,
+          name: name ?? this.name,
+          profilePicture: profilePicture ?? this.profilePicture,
+          balance: balance ?? this.balance,
+          selectedGenres: selectedGenres,
+          selectedLanguange: selectedLanguange);
+
   @override
   String toString() {
     return "[$id] - $name, $email";

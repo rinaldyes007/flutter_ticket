@@ -6,3 +6,4 @@ import 'package:image_picker/image_picker.dart';
 
 part 'user.dart';
 part 'registration_data.dart';
+part 'movie.dart';
